@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nestbox</title>
   <style>
     * {
@@ -11,30 +11,30 @@
 
     body {
       margin: 0;
+      background: #f4ecdf;
+      color: #2b2b2b;
       font-family: Aptos, Calibri, Arial, sans-serif;
-      background: #f5ecdf;
-      color: #2d2b28;
       line-height: 1.6;
     }
 
     .page {
       max-width: 1100px;
       margin: 0 auto;
-      padding: 24px 20px 80px;
+      padding: 20px 20px 70px;
       text-align: center;
     }
 
-    .top-image {
+    .hero-image {
+      display: block;
       width: 100%;
       max-width: 520px;
-      display: block;
-      margin: 0 auto 36px;
-      border-radius: 18px;
+      margin: 0 auto 28px;
+      border-radius: 16px;
     }
 
     .hero-text {
-      max-width: 900px;
-      margin: 0 auto 28px;
+      max-width: 920px;
+      margin: 0 auto;
     }
 
     .hero-text p {
@@ -47,24 +47,25 @@
       background: #0f777d;
       color: white;
       text-decoration: none;
-      padding: 15px 28px;
+      padding: 14px 28px;
       border-radius: 10px;
       font-size: 18px;
+      margin-top: 12px;
       margin-bottom: 56px;
     }
 
-    .section {
-      padding: 56px 0;
+    section {
+      padding: 54px 0;
     }
 
-    .section h2 {
+    h2 {
       font-size: 34px;
       margin-bottom: 14px;
     }
 
     .section-intro {
       max-width: 760px;
-      margin: 0 auto 34px;
+      margin: 0 auto 30px;
       font-size: 18px;
     }
 
@@ -72,15 +73,15 @@
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
       gap: 22px;
-      margin-top: 24px;
+      margin-top: 20px;
     }
 
     .card {
       background: rgba(255, 255, 255, 0.72);
       border-radius: 16px;
-      padding: 26px 22px;
-      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+      padding: 24px;
       text-align: left;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
     }
 
     .card h3 {
@@ -89,15 +90,15 @@
       font-size: 22px;
     }
 
-    .story-block {
+    .story-box {
       max-width: 860px;
       margin: 0 auto;
       background: rgba(255, 255, 255, 0.5);
+      padding: 32px 24px;
       border-radius: 18px;
-      padding: 34px 26px;
     }
 
-    .story-block p {
+    .story-box p {
       font-size: 18px;
       margin-bottom: 16px;
     }
@@ -107,13 +108,13 @@
       margin: 0 auto;
       background: #1f2c2c;
       color: white;
+      padding: 36px 24px;
       border-radius: 18px;
-      padding: 38px 24px;
     }
 
     .contact-box p {
       font-size: 18px;
-      margin-bottom: 16px;
+      margin-bottom: 14px;
     }
 
     .contact-box a {
@@ -121,51 +122,46 @@
     }
 
     .footer {
-      padding-top: 28px;
+      padding-top: 24px;
       font-size: 14px;
-      color: #6c6257;
+      color: #756b60;
     }
 
     @media (max-width: 768px) {
       .page {
-        padding: 18px 16px 60px;
-      }
-
-      .top-image {
-        max-width: 100%;
-        margin-bottom: 28px;
+        padding: 16px 16px 56px;
       }
 
       .hero-text p,
       .section-intro,
-      .story-block p,
+      .story-box p,
       .contact-box p {
         font-size: 16px;
       }
 
-      .section h2 {
+      h2 {
         font-size: 28px;
       }
 
       .btn {
         font-size: 16px;
-        padding: 13px 22px;
+        padding: 12px 22px;
       }
     }
   </style>
 </head>
 <body>
   <div class="page">
-    <img src="images/temp logo.jfif" alt="Nestbox brand image" class="top-image">
+
+    <img src="images/temp logo.jfif" alt="Nestbox logo" class="hero-image">
 
     <div class="hero-text">
       <p>Handcrafted home decor rooted in natural textures, honest materials, and thoughtful living.</p>
       <p>We are building a small-batch collection of woven and pottery-based pieces for warm, modern homes.</p>
+      <a class="btn" href="#contact">Enquire Now</a>
     </div>
 
-    <a class="btn" href="#contact">Enquire Now</a>
-
-    <section class="section">
+    <section>
       <h2>Featured collection</h2>
       <p class="section-intro">A first look at the kinds of products Nestbox is exploring for its opening collection.</p>
 
@@ -185,26 +181,16 @@
       </div>
     </section>
 
-    <section class="section">
+    <section>
       <h2>Our story</h2>
-      <div class="story-block">
+      <div class="story-box">
         <p>Nestbox is being built around a simple belief: home decor should be beautiful, useful, and honest about what it is made from.</p>
         <p>We want to create products that celebrate natural woven textures, craft traditions, and transparent sourcing rather than over-designed mass production.</p>
         <p>Our early ideas bring together materials like water hyacinth and black clay pottery to create pieces that feel grounded, warm, and real.</p>
       </div>
     </section>
 
-    <section class="section" id="contact">
+    <section id="contact">
       <div class="contact-box">
         <h2>Enquire</h2>
-        <p>We are currently shaping our first collection.</p>
-        <p>For early access, collaborations, or product updates, reach us at <a href="mailto:hello@nestbox.in">hello@nestbox.in</a>.</p>
-      </div>
-    </section>
-
-    <div class="footer">
-      © 2026 Nestbox. Built with care on GitHub Pages.
-    </div>
-  </div>
-</body>
-</html>
+        <p>We 
