@@ -125,17 +125,6 @@
       margin: 0 0 18px;
     }
 
-    .btn {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 14px 28px;
-      border-radius: 10px;
-      background: #0f777d;
-      color: white;
-      text-decoration: none;
-      font-size: 17px;
-    }
-
     .section-box {
       padding: 32px 28px;
       margin-bottom: 24px;
@@ -151,6 +140,46 @@
       max-width: 780px;
       font-size: 18px;
       margin-bottom: 24px;
+    }
+
+    .about-feature {
+      display: grid;
+      grid-template-columns: 1.05fr 1fr;
+      gap: 40px;
+      align-items: center;
+      background: rgba(255, 249, 242, 0.72);
+      border: 1px solid rgba(109, 92, 74, 0.10);
+      border-radius: 28px;
+      padding: 48px;
+      margin-bottom: 24px;
+      box-shadow: 0 10px 30px rgba(81, 63, 45, 0.05);
+    }
+
+    .about-text h2 {
+      font-size: 64px;
+      font-weight: 400;
+      line-height: 1.05;
+      margin-bottom: 28px;
+    }
+
+    .about-text p {
+      font-size: 20px;
+      max-width: 560px;
+      margin: 0 0 26px;
+      color: #2f2a25;
+    }
+
+    .about-image-wrap {
+      position: relative;
+    }
+
+    .about-image {
+      width: 100%;
+      height: 100%;
+      min-height: 480px;
+      object-fit: cover;
+      border-radius: 24px;
+      display: block;
     }
 
     .products {
@@ -222,6 +251,21 @@
       color: #7a6d61;
     }
 
+    @media (max-width: 1100px) {
+      .about-feature {
+        grid-template-columns: 1fr;
+        padding: 30px;
+      }
+
+      .about-text h2 {
+        font-size: 48px;
+      }
+
+      .about-image {
+        min-height: 360px;
+      }
+    }
+
     @media (max-width: 900px) {
       .layout {
         grid-template-columns: 1fr;
@@ -250,7 +294,8 @@
 
       .hero-text p,
       .section-intro,
-      .contact-box p {
+      .contact-box p,
+      .about-text p {
         font-size: 16px;
       }
 
@@ -258,9 +303,12 @@
         font-size: 28px;
       }
 
-      .btn {
-        font-size: 16px;
-        padding: 12px 22px;
+      .about-text h2 {
+        font-size: 38px;
+      }
+
+      .about-image {
+        min-height: 280px;
       }
 
       .card-image {
@@ -298,15 +346,20 @@
         <div class="hero-text">
           <p>Handcrafted home decor rooted in natural textures, honest materials, and thoughtful living.</p>
           <p>We are building a small-batch collection of woven and pottery-based pieces for warm, modern homes.</p>
-          <a class="btn" href="#contact">Enquire Now</a>
         </div>
       </section>
 
-      <section class="section-box" id="about">
-        <h2>About Us</h2>
-        <p class="section-intro">Nestbox is being built around a simple belief: home decor should be beautiful, useful, and honest about what it is made from.</p>
-        <p>We want to create products that celebrate natural woven textures, craft traditions, and transparent sourcing rather than over-designed mass production.</p>
-        <p>Our early ideas bring together materials like water hyacinth and black clay pottery to create pieces that feel grounded, warm, and real.</p>
+      <section id="about" class="about-feature">
+        <div class="about-text">
+          <h2>About Us</h2>
+          <p>Nestbox is a home decor brand being shaped around natural textures, thoughtful craftsmanship, and a quieter, more grounded way of living.</p>
+          <p>We are building a small-batch collection that brings together woven materials like water hyacinth and black clay pottery to create pieces that feel warm, tactile, and timeless.</p>
+          <p>Our aim is to celebrate honest materials, artisan-led making, and functional beauty for modern homes.</p>
+        </div>
+
+        <div class="about-image-wrap">
+          <img src="images/about-us.jpg" alt="Nestbox about us visual" class="about-image">
+        </div>
       </section>
 
       <section class="section-box" id="lamps">
@@ -318,6 +371,7 @@
             <p>Natural woven hanging lights designed to bring warmth and artisanal texture into living spaces.</p>
           </div>
           <div class="card">
+            <img src="images/table-lamps.png" alt="Nestbox table lamps preview" class="card-image">
             <h3>Table Lamps</h3>
             <p>Compact lighting pieces pairing woven shades with grounded black clay-inspired forms.</p>
           </div>
