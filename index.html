@@ -9,79 +9,161 @@
       box-sizing: border-box;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
-      background: #f4ecdf;
-      color: #2b2b2b;
       font-family: Aptos, Calibri, Arial, sans-serif;
+      background: linear-gradient(180deg, #efe5d7 0%, #eadfce 100%);
+      color: #2b2b2b;
       line-height: 1.6;
     }
 
-    .page {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 20px 20px 70px;
+    .layout {
+      display: grid;
+      grid-template-columns: 260px 1fr;
+      min-height: 100vh;
+    }
+
+    .sidebar {
+      position: sticky;
+      top: 0;
+      align-self: start;
+      height: 100vh;
+      padding: 40px 28px;
+      background: rgba(255, 248, 240, 0.42);
+      border-right: 1px solid rgba(90, 74, 58, 0.14);
+      backdrop-filter: blur(8px);
+    }
+
+    .sidebar-logo {
+      font-size: 14px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #7f6d5d;
+      margin-bottom: 40px;
+    }
+
+    .nav {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .nav a,
+    .nav summary {
+      color: #2b2b2b;
+      text-decoration: none;
+      font-size: 18px;
+      cursor: pointer;
+      list-style: none;
+    }
+
+    .nav summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .nav a:hover,
+    .nav summary:hover {
+      color: #0f777d;
+    }
+
+    .nav details {
+      margin: 0;
+    }
+
+    .submenu {
+      margin-top: 12px;
+      padding-left: 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .submenu a {
+      font-size: 16px;
+      color: #5b5046;
+    }
+
+    .content {
+      padding: 28px 40px 70px;
+    }
+
+    .hero,
+    .section-box,
+    .contact-box {
+      background: rgba(255, 250, 244, 0.58);
+      border: 1px solid rgba(109, 92, 74, 0.12);
+      border-radius: 24px;
+      backdrop-filter: blur(6px);
+      box-shadow: 0 10px 30px rgba(80, 61, 43, 0.06);
+    }
+
+    .hero {
+      padding: 30px 28px 40px;
       text-align: center;
+      margin-bottom: 28px;
     }
 
     .hero-image {
       display: block;
       width: 100%;
-      max-width: 520px;
+      max-width: 460px;
       margin: 0 auto 28px;
-      border-radius: 16px;
+      border-radius: 18px;
     }
 
     .hero-text {
-      max-width: 920px;
+      max-width: 880px;
       margin: 0 auto;
     }
 
     .hero-text p {
-      font-size: 20px;
-      margin: 0 0 22px;
+      font-size: 21px;
+      margin: 0 0 20px;
     }
 
     .btn {
       display: inline-block;
+      margin-top: 10px;
       background: #0f777d;
       color: white;
       text-decoration: none;
       padding: 14px 28px;
       border-radius: 10px;
-      font-size: 18px;
-      margin-top: 12px;
-      margin-bottom: 56px;
+      font-size: 17px;
     }
 
-    section {
-      padding: 54px 0;
+    .section-box {
+      padding: 34px 28px;
+      margin-bottom: 24px;
     }
 
     h2 {
-      font-size: 34px;
-      margin-bottom: 14px;
+      margin-top: 0;
+      margin-bottom: 12px;
+      font-size: 32px;
     }
 
     .section-intro {
-      max-width: 760px;
-      margin: 0 auto 30px;
       font-size: 18px;
+      max-width: 780px;
+      margin-bottom: 24px;
     }
 
     .products {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 22px;
-      margin-top: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
     }
 
     .card {
-      background: rgba(255, 255, 255, 0.72);
-      border-radius: 16px;
-      padding: 24px;
-      text-align: left;
-      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+      background: rgba(255, 255, 255, 0.46);
+      border: 1px solid rgba(100, 82, 66, 0.1);
+      border-radius: 18px;
+      padding: 22px;
     }
 
     .card h3 {
@@ -90,31 +172,15 @@
       font-size: 22px;
     }
 
-    .story-box {
-      max-width: 860px;
-      margin: 0 auto;
-      background: rgba(255, 255, 255, 0.5);
-      padding: 32px 24px;
-      border-radius: 18px;
-    }
-
-    .story-box p {
-      font-size: 18px;
-      margin-bottom: 16px;
+    .card p {
+      margin-bottom: 0;
+      font-size: 16px;
     }
 
     .contact-box {
-      max-width: 760px;
-      margin: 0 auto;
-      background: #1f2c2c;
+      padding: 34px 28px;
+      background: rgba(31, 44, 44, 0.88);
       color: white;
-      padding: 36px 24px;
-      border-radius: 18px;
-    }
-
-    .contact-box p {
-      font-size: 18px;
-      margin-bottom: 14px;
     }
 
     .contact-box a {
@@ -122,20 +188,35 @@
     }
 
     .footer {
-      padding-top: 24px;
+      padding-top: 16px;
       font-size: 14px;
       color: #756b60;
     }
 
-    @media (max-width: 768px) {
-      .page {
-        padding: 16px 16px 56px;
+    @media (max-width: 900px) {
+      .layout {
+        grid-template-columns: 1fr;
+      }
+
+      .sidebar {
+        position: relative;
+        height: auto;
+        border-right: none;
+        border-bottom: 1px solid rgba(90, 74, 58, 0.14);
+      }
+
+      .content {
+        padding: 20px 16px 50px;
+      }
+
+      .hero,
+      .section-box,
+      .contact-box {
+        padding: 24px 18px;
       }
 
       .hero-text p,
-      .section-intro,
-      .story-box p,
-      .contact-box p {
+      .section-intro {
         font-size: 16px;
       }
 
@@ -143,54 +224,66 @@
         font-size: 28px;
       }
 
-      .btn {
-        font-size: 16px;
-        padding: 12px 22px;
+      .hero-image {
+        max-width: 320px;
       }
     }
   </style>
 </head>
 <body>
-  <div class="page">
+  <div class="layout">
 
-    <img src="images/temp logo.jfif" alt="Nestbox logo" class="hero-image">
+    <aside class="sidebar">
+      <div class="sidebar-logo">Nestbox</div>
 
-    <div class="hero-text">
-      <p>Handcrafted home decor rooted in natural textures, honest materials, and thoughtful living.</p>
-      <p>We are building a small-batch collection of woven and pottery-based pieces for warm, modern homes.</p>
-      <a class="btn" href="#contact">Enquire Now</a>
-    </div>
+      <nav class="nav">
+        <a href="#about">&gt; About Us</a>
 
-    <section>
-      <h2>Featured collection</h2>
-      <p class="section-intro">A first look at the kinds of products Nestbox is exploring for its opening collection.</p>
+        <details>
+          <summary>&gt; Categories</summary>
+          <div class="submenu">
+            <a href="#lamps">a) Lamps</a>
+            <a href="#wall-accents">b) Wall Accents</a>
+            <a href="#table-top">c) Table Top Accessories</a>
+          </div>
+        </details>
 
-      <div class="products">
-        <div class="card">
-          <h3>Woven pendant lamps</h3>
-          <p>Natural water hyacinth shades that bring warmth, texture, and softness into living spaces.</p>
+        <a href="#contact">&gt; Contact Us</a>
+      </nav>
+    </aside>
+
+    <main class="content">
+      <section class="hero">
+        <img src="images/temp logo.jfif" alt="Nestbox logo" class="hero-image">
+
+        <div class="hero-text">
+          <p>Handcrafted home decor rooted in natural textures, honest materials, and thoughtful living.</p>
+          <p>We are building a small-batch collection of woven and pottery-based pieces for warm, modern homes.</p>
+          <a class="btn" href="#contact">Enquire Now</a>
         </div>
-        <div class="card">
-          <h3>Black clay accent pieces</h3>
-          <p>Decor concepts that combine earthy woven forms with black clay detailing for a grounded handmade feel.</p>
-        </div>
-        <div class="card">
-          <h3>Storage and decor baskets</h3>
-          <p>Functional home pieces made for people who want utility, beauty, and natural materials together.</p>
-        </div>
-      </div>
-    </section>
+      </section>
 
-    <section>
-      <h2>Our story</h2>
-      <div class="story-box">
-        <p>Nestbox is being built around a simple belief: home decor should be beautiful, useful, and honest about what it is made from.</p>
+      <section class="section-box" id="about">
+        <h2>About Us</h2>
+        <p class="section-intro">Nestbox is being built around a simple belief: home decor should be beautiful, useful, and honest about what it is made from.</p>
         <p>We want to create products that celebrate natural woven textures, craft traditions, and transparent sourcing rather than over-designed mass production.</p>
         <p>Our early ideas bring together materials like water hyacinth and black clay pottery to create pieces that feel grounded, warm, and real.</p>
-      </div>
-    </section>
+      </section>
 
-    <section id="contact">
-      <div class="contact-box">
-        <h2>Enquire</h2>
-        <p>We 
+      <section class="section-box" id="lamps">
+        <h2>Lamps</h2>
+        <p class="section-intro">Lighting concepts that use woven textures and earthy accents to create a softer, warmer mood at home.</p>
+        <div class="products">
+          <div class="card">
+            <h3>Pendant Lamps</h3>
+            <p>Natural woven hanging lights designed to bring warmth and artisanal texture into living spaces.</p>
+          </div>
+          <div class="card">
+            <h3>Table Lamps</h3>
+            <p>Compact lighting pieces pairing woven shades with grounded black clay-inspired forms.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-box" id="wall-accents">
+        
