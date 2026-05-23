@@ -5,143 +5,206 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Nestbox</title>
   <style>
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f7f4ee;
-      color: #2b2b2b;
+      font-family: Aptos, Calibri, Arial, sans-serif;
+      background: #f5ecdf;
+      color: #2d2b28;
       line-height: 1.6;
     }
-    header {
-      background: #efe7dc;
-      padding: 80px 20px 60px;
+
+    .page {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 24px 20px 80px;
       text-align: center;
     }
-    .container {
-      max-width: 1000px;
-      margin: auto;
-      padding: 0 20px;
+
+    .top-image {
+      width: 100%;
+      max-width: 520px;
+      display: block;
+      margin: 0 auto 36px;
+      border-radius: 18px;
     }
-    h1, h2, h3 {
-      margin-top: 0;
+
+    .hero-text {
+      max-width: 900px;
+      margin: 0 auto 28px;
     }
-    h1 {
-      font-size: 52px;
-      margin-bottom: 16px;
+
+    .hero-text p {
+      font-size: 20px;
+      margin: 0 0 22px;
     }
-    h2 {
-      font-size: 34px;
-      margin-bottom: 16px;
-    }
-    p {
-      font-size: 18px;
-      margin-bottom: 16px;
-    }
+
     .btn {
       display: inline-block;
-      margin-top: 12px;
-      padding: 14px 22px;
-      background: #01696f;
+      background: #0f777d;
       color: white;
       text-decoration: none;
-      border-radius: 8px;
+      padding: 15px 28px;
+      border-radius: 10px;
+      font-size: 18px;
+      margin-bottom: 56px;
     }
-    section {
-      padding: 70px 20px;
+
+    .section {
+      padding: 56px 0;
     }
+
+    .section h2 {
+      font-size: 34px;
+      margin-bottom: 14px;
+    }
+
+    .section-intro {
+      max-width: 760px;
+      margin: 0 auto 34px;
+      font-size: 18px;
+    }
+
     .products {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 20px;
-      margin-top: 30px;
+      gap: 22px;
+      margin-top: 24px;
     }
+
     .card {
-      background: white;
-      padding: 24px;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      background: rgba(255, 255, 255, 0.72);
+      border-radius: 16px;
+      padding: 26px 22px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+      text-align: left;
     }
-    .story {
-      background: #f1ede6;
+
+    .card h3 {
+      margin-top: 0;
+      margin-bottom: 10px;
+      font-size: 22px;
     }
-    .contact {
-      text-align: center;
-      background: #1d2a2a;
+
+    .story-block {
+      max-width: 860px;
+      margin: 0 auto;
+      background: rgba(255, 255, 255, 0.5);
+      border-radius: 18px;
+      padding: 34px 26px;
+    }
+
+    .story-block p {
+      font-size: 18px;
+      margin-bottom: 16px;
+    }
+
+    .contact-box {
+      max-width: 760px;
+      margin: 0 auto;
+      background: #1f2c2c;
+      color: white;
+      border-radius: 18px;
+      padding: 38px 24px;
+    }
+
+    .contact-box p {
+      font-size: 18px;
+      margin-bottom: 16px;
+    }
+
+    .contact-box a {
       color: white;
     }
-    .contact a {
-      color: white;
-    }
-    footer {
-      text-align: center;
-      padding: 24px 20px;
+
+    .footer {
+      padding-top: 28px;
       font-size: 14px;
-      background: #e9e2d7;
+      color: #6c6257;
     }
+
     @media (max-width: 768px) {
-      h1 { font-size: 38px; }
-      h2 { font-size: 28px; }
-      p { font-size: 16px; }
+      .page {
+        padding: 18px 16px 60px;
+      }
+
+      .top-image {
+        max-width: 100%;
+        margin-bottom: 28px;
+      }
+
+      .hero-text p,
+      .section-intro,
+      .story-block p,
+      .contact-box p {
+        font-size: 16px;
+      }
+
+      .section h2 {
+        font-size: 28px;
+      }
+
+      .btn {
+        font-size: 16px;
+        padding: 13px 22px;
+      }
     }
   </style>
 </head>
 <body>
+  <div class="page">
+    <img src="images/temp logo.jfif" alt="Nestbox brand image" class="top-image">
 
-<header>
-  <div class="container">
-    <h1>Nestbox</h1>
-    <p>Handcrafted home decor rooted in natural textures, honest materials, and thoughtful living.</p>
-    <p>We are building a small-batch collection of woven and pottery-based pieces for warm, modern homes.</p>
+    <div class="hero-text">
+      <p>Handcrafted home decor rooted in natural textures, honest materials, and thoughtful living.</p>
+      <p>We are building a small-batch collection of woven and pottery-based pieces for warm, modern homes.</p>
+    </div>
+
     <a class="btn" href="#contact">Enquire Now</a>
 
-    <img src="images/temp logo.jfif" alt="Nestbox handcrafted decor" style="width:100%; max-width:500px; border-radius:12px; display:block; margin:30px auto;">
-  </div>
-</header>
-
-  <section>
-    <div class="container">
+    <section class="section">
       <h2>Featured collection</h2>
-      <p>A first look at the kinds of products Nestbox is exploring for its launch collection.</p>
+      <p class="section-intro">A first look at the kinds of products Nestbox is exploring for its opening collection.</p>
 
       <div class="products">
         <div class="card">
           <h3>Woven pendant lamps</h3>
-          <p>Natural water hyacinth shades designed to add warmth, softness, and texture to living spaces.</p>
+          <p>Natural water hyacinth shades that bring warmth, texture, and softness into living spaces.</p>
         </div>
         <div class="card">
-          <h3>Black clay accent lamps</h3>
-          <p>Signature lighting concepts that combine woven forms with black clay detailing for a distinct handmade feel.</p>
+          <h3>Black clay accent pieces</h3>
+          <p>Decor concepts that combine earthy woven forms with black clay detailing for a grounded handmade feel.</p>
         </div>
         <div class="card">
           <h3>Storage and decor baskets</h3>
-          <p>Functional woven pieces for modern homes that value utility, beauty, and natural materials.</p>
+          <p>Functional home pieces made for people who want utility, beauty, and natural materials together.</p>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="story">
-    <div class="container">
+    <section class="section">
       <h2>Our story</h2>
-      <p>Nestbox is being built around a simple belief: home decor should be beautiful, useful, and honest about what it is made from.</p>
-      <p>We want to create products that celebrate natural woven textures, craft traditions, and transparent sourcing rather than over-designed mass production.</p>
-      <p>Our early ideas bring together materials like water hyacinth and black clay pottery to create pieces that feel grounded, warm, and real.</p>
+      <div class="story-block">
+        <p>Nestbox is being built around a simple belief: home decor should be beautiful, useful, and honest about what it is made from.</p>
+        <p>We want to create products that celebrate natural woven textures, craft traditions, and transparent sourcing rather than over-designed mass production.</p>
+        <p>Our early ideas bring together materials like water hyacinth and black clay pottery to create pieces that feel grounded, warm, and real.</p>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="contact-box">
+        <h2>Enquire</h2>
+        <p>We are currently shaping our first collection.</p>
+        <p>For early access, collaborations, or product updates, reach us at <a href="mailto:hello@nestbox.in">hello@nestbox.in</a>.</p>
+      </div>
+    </section>
+
+    <div class="footer">
+      © 2026 Nestbox. Built with care on GitHub Pages.
     </div>
-  </section>
-
-  <section class="contact" id="contact">
-    <div class="container">
-      <h2>Enquire</h2>
-      <p>We are currently shaping our first collection.</p>
-      <p>If you’d like early access, collaborations, or product updates, reach out below.</p>
-      <p><a class="btn" href="mailto:ishani.tandon17@gmail.com">ishani.tandon17@gmail.com</a></p>
-    </div>
-  </section>
-
-  <footer>
-    <p>© 2026 Nestbox. Built with care on GitHub Pages.</p>
-  </footer>
-
+  </div>
 </body>
 </html>
