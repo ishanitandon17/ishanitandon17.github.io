@@ -16,14 +16,14 @@
     body {
       margin: 0;
       font-family: Aptos, Calibri, Arial, sans-serif;
-      background: linear-gradient(180deg, #efe5d7 0%, #eadfce 100%);
+      background: linear-gradient(180deg, #efe4d6 0%, #eadfce 100%);
       color: #2b2b2b;
       line-height: 1.6;
     }
 
     .layout {
       display: grid;
-      grid-template-columns: 260px 1fr;
+      grid-template-columns: 270px 1fr;
       min-height: 100vh;
     }
 
@@ -32,17 +32,17 @@
       top: 0;
       align-self: start;
       height: 100vh;
-      padding: 40px 28px;
+      padding: 42px 28px;
       background: rgba(255, 248, 240, 0.42);
-      border-right: 1px solid rgba(90, 74, 58, 0.14);
+      border-right: 1px solid rgba(92, 75, 59, 0.12);
       backdrop-filter: blur(8px);
     }
 
     .sidebar-logo {
       font-size: 14px;
-      letter-spacing: 0.18em;
       text-transform: uppercase;
-      color: #7f6d5d;
+      letter-spacing: 0.18em;
+      color: #7d6b5a;
       margin-bottom: 40px;
     }
 
@@ -54,15 +54,11 @@
 
     .nav a,
     .nav summary {
-      color: #2b2b2b;
       text-decoration: none;
+      color: #2b2b2b;
       font-size: 18px;
       cursor: pointer;
       list-style: none;
-    }
-
-    .nav summary::-webkit-details-marker {
-      display: none;
     }
 
     .nav a:hover,
@@ -70,7 +66,11 @@
       color: #0f777d;
     }
 
-    .nav details {
+    .nav summary::-webkit-details-marker {
+      display: none;
+    }
+
+    details {
       margin: 0;
     }
 
@@ -84,11 +84,11 @@
 
     .submenu a {
       font-size: 16px;
-      color: #5b5046;
+      color: #5a5046;
     }
 
     .content {
-      padding: 28px 40px 70px;
+      padding: 28px 36px 40px;
     }
 
     .hero,
@@ -98,13 +98,13 @@
       border: 1px solid rgba(109, 92, 74, 0.12);
       border-radius: 24px;
       backdrop-filter: blur(6px);
-      box-shadow: 0 10px 30px rgba(80, 61, 43, 0.06);
+      box-shadow: 0 10px 30px rgba(81, 63, 45, 0.06);
     }
 
     .hero {
-      padding: 30px 28px 40px;
+      padding: 28px 28px 36px;
       text-align: center;
-      margin-bottom: 28px;
+      margin-bottom: 24px;
     }
 
     .hero-image {
@@ -116,28 +116,28 @@
     }
 
     .hero-text {
-      max-width: 880px;
+      max-width: 860px;
       margin: 0 auto;
     }
 
     .hero-text p {
       font-size: 21px;
-      margin: 0 0 20px;
+      margin: 0 0 18px;
     }
 
     .btn {
       display: inline-block;
       margin-top: 10px;
+      padding: 14px 28px;
+      border-radius: 10px;
       background: #0f777d;
       color: white;
       text-decoration: none;
-      padding: 14px 28px;
-      border-radius: 10px;
       font-size: 17px;
     }
 
     .section-box {
-      padding: 34px 28px;
+      padding: 32px 28px;
       margin-bottom: 24px;
     }
 
@@ -148,8 +148,8 @@
     }
 
     .section-intro {
-      font-size: 18px;
       max-width: 780px;
+      font-size: 18px;
       margin-bottom: 24px;
     }
 
@@ -161,7 +161,7 @@
 
     .card {
       background: rgba(255, 255, 255, 0.46);
-      border: 1px solid rgba(100, 82, 66, 0.1);
+      border: 1px solid rgba(100, 82, 66, 0.10);
       border-radius: 18px;
       padding: 22px;
     }
@@ -179,18 +179,37 @@
 
     .contact-box {
       padding: 34px 28px;
-      background: rgba(31, 44, 44, 0.88);
+      margin-bottom: 18px;
+      background: rgba(31, 44, 44, 0.9);
       color: white;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .contact-box h2 {
+      margin-top: 0;
+      margin-bottom: 14px;
+    }
+
+    .contact-box p {
+      font-size: 18px;
+      margin-bottom: 14px;
     }
 
     .contact-box a {
-      color: white;
+      color: #f8eee1;
+      text-decoration: underline;
+    }
+
+    .or-line {
+      font-size: 14px;
+      letter-spacing: 0.12em;
+      opacity: 0.82;
     }
 
     .footer {
-      padding-top: 16px;
+      padding: 10px 4px 6px;
       font-size: 14px;
-      color: #756b60;
+      color: #7a6d61;
     }
 
     @media (max-width: 900px) {
@@ -202,11 +221,11 @@
         position: relative;
         height: auto;
         border-right: none;
-        border-bottom: 1px solid rgba(90, 74, 58, 0.14);
+        border-bottom: 1px solid rgba(92, 75, 59, 0.12);
       }
 
       .content {
-        padding: 20px 16px 50px;
+        padding: 20px 16px 30px;
       }
 
       .hero,
@@ -215,8 +234,13 @@
         padding: 24px 18px;
       }
 
+      .hero-image {
+        max-width: 320px;
+      }
+
       .hero-text p,
-      .section-intro {
+      .section-intro,
+      .contact-box p {
         font-size: 16px;
       }
 
@@ -224,8 +248,9 @@
         font-size: 28px;
       }
 
-      .hero-image {
-        max-width: 320px;
+      .btn {
+        font-size: 16px;
+        padding: 12px 22px;
       }
     }
   </style>
@@ -315,20 +340,19 @@
         </div>
       </section>
 
-     <section class="contact-box" id="contact">
-  <h2>Contact Us</h2>
-  <p>For any queries, suggestions, or collaborations, we would love to hear from you.</p>
-  <p>
-    Call us at
-    <a href="tel:+919711081246">+91 9711081246</a>
-  </p>
-  <p>OR</p>
-  <p>
-    Write to us at
-    <a href="mailto:ishani.tandon17@gmail.com">ishani.tandon17@gmail.com</a>
-  </p>
-</section>
+      <section class="contact-box" id="contact">
+        <h2>Contact Us</h2>
+        <p>For any queries, suggestions, or collaborations, we would love to hear from you.</p>
+        <p>Call us at <a href="tel:+919711081246">+91 9711081246</a></p>
+        <p class="or-line">OR</p>
+        <p>Write to us at <a href="mailto:ishani.tandon17@gmail.com">ishani.tandon17@gmail.com</a></p>
+      </section>
 
-<footer class="footer">
-  © 2026 Nestbox.
-</footer>
+      <footer class="footer">
+        © 2026 Nestbox.
+      </footer>
+    </main>
+
+  </div>
+</body>
+</html>
