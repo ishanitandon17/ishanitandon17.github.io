@@ -142,6 +142,15 @@
       margin-bottom: 24px;
     }
 
+    .section-centered {
+      text-align: center;
+    }
+
+    .section-centered .section-intro {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
     .about-feature {
       display: grid;
       grid-template-columns: 1.05fr 1fr;
@@ -186,6 +195,7 @@
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 20px;
+      text-align: left;
     }
 
     .card {
@@ -343,6 +353,12 @@
       <section class="hero">
         <img src="images/temp-logo.jfif" alt="Nestbox logo" class="hero-image">
 
+        <div class="hero-text">
+          <p>Handcrafted home decor rooted in natural textures, honest materials, and thoughtful living.</p>
+          <p>We are building a small-batch collection of woven and pottery-based pieces for warm, modern homes.</p>
+        </div>
+      </section>
+
       <section id="about" class="about-feature">
         <div class="about-text">
           <h2>About Us</h2>
@@ -356,7 +372,7 @@
         </div>
       </section>
 
-      <section class="section-box" id="lamps">
+      <section class="section-box section-centered" id="lamps">
         <h2>Lamps</h2>
         <p class="section-intro">Lighting concepts that use woven textures and earthy accents to create a softer, warmer mood at home.</p>
         <div class="products">
@@ -365,7 +381,7 @@
             <p>Natural woven hanging lights designed to bring warmth and artisanal texture into living spaces.</p>
           </div>
           <div class="card">
-             <h3>Table Lamps</h3>
+            <h3>Table Lamps</h3>
             <p>Compact lighting pieces pairing woven shades with grounded black clay-inspired forms.</p>
           </div>
         </div>
@@ -396,7 +412,7 @@
             <p>Woven tabletop pieces that combine utility with a calm, premium material language.</p>
           </div>
           <div class="card">
-             <img src="images/table-lamps.png" alt="Nestbox table lamps preview" class="card-image">
+            <img src="images/table-lamps.png" alt="Nestbox decor objects preview" class="card-image">
             <h3>Decor Objects</h3>
             <p>Small accents and vessels that bring together earthy tones, handmade texture, and restraint.</p>
           </div>
